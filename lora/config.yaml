@@ -1,0 +1,17 @@
+# initializer config
+path : "ISIC2020_train"
+labels : "/label"
+images : "/Image"
+use_wandb : False
+
+# preprocessing config
+classes : ["Unknown", "Nevus"]
+format_file : ".jpg"
+
+# model config
+arch : "ViT"
+checkpoint : "google/vit-base-patch16-224-in21k"
+dataset : "ISIC-2018"
+epochs : 100
+batch_size : 128
+learning_rate : 0.005

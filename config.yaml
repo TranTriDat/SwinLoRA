@@ -1,0 +1,31 @@
+# initializer config
+path : "lora/ISIC2019_train"
+labels : "/label"
+# images : "/Image_DullRazor"
+# images : "/Image"
+images : "/original_data"
+
+
+use_wandb : False
+
+# preprocessing config
+#classes : ["MEL", "NV", "BCC", "AKIEC", "BKL", "DF", "VASC"]
+classes : ["AK", "BCC", "BKL", "DF", "MEL", "NV", "SCC", "VASC"]
+format_file : ".jpg"
+
+# model config
+arch : "ViT"
+# checkpoint : "google/vit-base-patch16-224-in21k"
+# checkpoint : "microsoft/swinv2-base-patch4-window12-192-22k"
+# checkpoint: "microsoft/swin-tiny-patch4-window7-224"
+# checkpoint: "microsoft/swin-base-patch4-window7-224-in22k"
+checkpoint: "microsoft/resnet-50"
+
+dataset : "ISIC-2019"
+epochs : 100
+batch_size : 64
+
+# learning_rate : 0.0005
+learning_rate : 0.001
+
+
